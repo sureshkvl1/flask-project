@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 RUN apt-get update -y
 RUN apt-get install -y python-pip python-dev build-essential
-COPY ../src/app.py /app
+COPY src/app.py /app
 WORKDIR /app
 RUN pip install -r flask==0.12
 ENTRYPOINT ["python"]
